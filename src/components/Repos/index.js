@@ -42,10 +42,10 @@ const ReposList = () => {
     );
   }
 
-  if (!repos.length) {
+  if (!repos.length || repoState.error) {
     return (
       <ReposNotFound>
-        Repositories not found. Please search in above search box.
+        Repositories not found. Please try searching in above input box.
       </ReposNotFound>
     );
   }
